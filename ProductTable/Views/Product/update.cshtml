@@ -1,0 +1,41 @@
+﻿@model UpdateProductViewModel
+<html>
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <section class="container bg-success" style="margin:15px; margin-top:80px; border-radius:10px; width:800px; ">
+
+        <form asp-controller="Product" asp-action="Update" method="post">
+            <section>
+                <input style="margin:15px; width:40px;" asp-for="Product.Id" hidden />
+            </section>
+            <section>
+                <label style="font-size:22px" asp-for="Product.Name"></label>
+                <input style="margin:15x;" asp-for="Product.Name" />
+                <span style="color:darkkhaki;" asp-validation-for="Product.Name"></span>
+            </section>
+            
+            <section>
+                <label style="font-size:22px" asp-for="Product.Price"></label>
+                <input style="margin:15px;" asp-for="Product.Price" />
+                <span style="color:darkkhaki;" asp-validation-for="Product.Price"></span>
+            </section>
+            <section>
+                <label style="font-size:22px" asp-for="Product.Discount"></label>
+                <input style="margin:10px;" asp-for="Product.Discount" />
+                <span style="color:darkkhaki;" asp-validation-for="Product.Discount"></span>
+            </section>
+            <section>
+                <label style="font-size:22px" asp-for="Product.ImagePath"></label>
+                <input style="margin:15px;" asp-for="Product.ImagePath" />
+                <span style="color:darkkhaki;" asp-validation-for="Product.ImagePath"></span>
+            </section>
+            <section>
+                <button class="btn btn-primary" type="submit">Update</button>
+            </section>
+        </form>
+    </section>
+</body>
+</html>
