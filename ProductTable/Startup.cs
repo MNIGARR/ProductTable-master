@@ -28,7 +28,9 @@ namespace ProductTable
         public void ConfigureServices(IServiceCollection services)
         {
 
-            var connection = "";
+            
+
+            var connection = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=ProductDB;Integrated Security=True;";
 
 
 

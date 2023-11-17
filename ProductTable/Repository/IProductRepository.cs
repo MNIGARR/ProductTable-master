@@ -9,6 +9,8 @@ namespace ProductTable.Repository
         Task<List<Product>> GetAllAsync();
 
         Task Add(Product product);
+        Task Update(Product product);
+        Task Delete(Product product);
     }
 }
 

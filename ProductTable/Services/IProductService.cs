@@ -6,7 +6,11 @@ namespace ProductTable.Services
 {
     public interface IProductService
     {
-        Task<List<Product>> GetAllByKey(string key = "");
+        Task<List<Product>> GetAllProductsAsync();
+        Task AddProduct(Product product);
+        Task UpdateProduct(Product product);
+        Task DeleteProduct(Product product);
 
+        Task<Product> GetProductByIdAsync(int id);
     }
 }
